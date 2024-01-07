@@ -126,20 +126,20 @@ def pair_emails_with_prohibition(email_and_list_data, prohibited_pairs):
 
         subject1 = "Subject for Email 1"
         body1 = f"Dear {name1}, \n\nhis Christmas season you have been matched up with {name2} for this years Pollyanna!\n\nHere is their corresponding wish list:\n{items2_plain_text}\n\nMerry Christmas!!!" 
-        #send_email(email1, name1, subject1, body1, IMAGE_PATH)
+        send_email(email1, name1, subject1, body1, IMAGE_PATH)
         print(f"Email 1 sent to: {email1}")
 
 
         subject2 = "Subject for Email 2"
         body2 = f"Dear {name2},\n\nThis Christmas season you have been matched up with {name1} for this years Pollyanna!\n\nHere is their corresponding wish list:\n{items1_plain_text}\n\nMerry Christmas!!!"
-        #send_email(email2, name2, subject2, body2, IMAGE_PATH)
+        send_email(email2, name2, subject2, body2, IMAGE_PATH)
         print(f"Email 2 sent to: {email2}")
 
 
         # Remove the sent pair and any pairs involving the participants from the list
         all_possible_pairs = [(e1, e2) for e1, e2 in all_possible_pairs
                               if e1[1] != name1 and e1[1] != name2 and e2[1] != name1 and e2[1] != name2]
-        print(f"Remaining pairs: {all_possible_pairs}")
+        #print(f"Remaining pairs: {all_possible_pairs}")
 
     return
 
