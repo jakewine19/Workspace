@@ -11,6 +11,6 @@ It has two functions:
 2. pair_emails_with_prohibition - Pairs all of the participants up randonmly, but they cannot be paired to their significant other.
 
 Run the script through the command line by passing it arguments
-- --fields (file path) | 
-- --sig_others (file path) |
-- --prohibit | 
+- --fields (file path) 
+- --sig_others (file path) 
+- --prohibit (optional) Add in this flag if you want to run the script with prohibiting significant others from matching. 
